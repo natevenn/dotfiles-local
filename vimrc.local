@@ -1,0 +1,30 @@
+" Basic editor behaviour
+set cursorline                  " colours the line the cursor is on
+set scrolloff=4                 " adds top/bottom buffer between cursor and window
+
+syntax enable
+set background=dark
+colorscheme solarized
+
+"searching
+set hlsearch
+set incsearch 
+" esc unhighlights
+nnoremap <silent> <esc> :noh<cr><esc>
+
+" maps esc to jj
+imap jj <esc>
+
+" pry insertion
+nmap <Leader>p orequire 'pry';binding.pry<ESC>;
+" paste without being stupid ("*p means to paste on next line (p) from the register (") that represents the clipboard (*))
+nnoremap <Leader>v :set paste<CR>"*p<cr>:set nopaste<cr>; 
+
+let g:airline_enable_branch=1
+let g:airline_powerline_fonts=1   " automatic population of g:airline_symbols dictionary with powerline symbols.
+let g:airline_detect_modified=1   " marks when the file has changed
+let g:airline_detect_paste=1      " enable paste detection (set paste) ie I'm not typing, I'm pasting
+let g:airline_detect_iminsert=0   " I have no idea
+let g:airline_inactive_collapse=1 " inactive windows should have the left section collapsed to only the filename of that buffer.
+let g:airline_solarized_bg='dark' " Use Solarized Dark theme
+let g:airline_theme='dark'        " Dark airline theme

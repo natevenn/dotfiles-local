@@ -1,0 +1,9 @@
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'christoomey/vim-tmux-runner'
+Plug 'christoomey/vim-system-copy'
+Plug 'tpope/vim-vinegar'
+Plug 'airblade/vim-gitgutter'
+Plug 'mattn/emmet-vim'
+Plug 'https://github.com/bling/vim-airline'
+Plug 'edkolev/tmuxline.vim'
+

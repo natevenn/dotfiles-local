@@ -1,0 +1,13 @@
+[user]
+  name = Nathan Venn
+  email = natevenn@gmail.com
+[core]
+  editor = vim
+[color]
+  ui = true
+[git]
+  hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+[alias]
+  loggy=log --oneline --graph --decorate --all
+  logg=log --oneline --graph --decorate --all -15
+

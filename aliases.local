@@ -1,0 +1,37 @@
+# General
+alias gh='open https://github.com/natevenn'
+alias google='open https://google.com'
+alias find_servers='sudo lsof -iTCP -sTCP:LISTEN -P'
+
+# rvm gemsets
+alias infosweep-frontend='rvm use 2.4.0 && rvm gemset use monitoring'
+alias infosweep-backend='rvm use 2.4.0 && rvm gemset use infosweep-backend'
+alias infosweep-cms='rvm use 2.4.0 && rvm gemset use infosweep-cms'
+alias core-app='rvm use 2.4.0 && rvm gemset use core-app'
+alias marca-global='rvm use 2.3.1 && rvm gemset use marca-global-static'
+
+# tig
+alias tst="tig status"
+
+# git
+#alias loggy=git log --oneline --graph --decorate --all
+#alias gco='git checkout'
+#alias gcd='gco development'
+#alias gcm='gco master'
+#alias gcb='gco -b'
+#alias gb='git branch'
+#alias ga='git add'
+#alias gcmsg='git commit'
+
+
+# rails
+alias dbclear='rake db:drop && rake db:create && rake db:migrate && rake db:schema:dump && rake db:test:prepare'
+alias dbreset='rake db:reset'
+
+# Docker
+alias dc='docker-compose'
+
+# paths
+alias cf='cd ~/marca-development/infosweep/frontend'
+alias cb='cd ~/marca-development/infosweep/backend'
+
