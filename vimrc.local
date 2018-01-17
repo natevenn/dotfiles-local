@@ -8,7 +8,7 @@ colorscheme solarized
 
 "searching
 set hlsearch
-set incsearch 
+set incsearch
 " esc unhighlights
 nnoremap <silent> <esc> :noh<cr><esc>
 
@@ -17,9 +17,15 @@ imap jj <esc>
 
 " pry insertion
 nmap <Leader>p orequire 'pry';binding.pry<ESC>;
-" paste without being stupid ("*p means to paste on next line (p) from the register (") that represents the clipboard (*))
-nnoremap <Leader>v :set paste<CR>"*p<cr>:set nopaste<cr>; 
+" debugger insertion
+nmap <Leader>[ odebugger<ESC>;
 
+" paste without being stupid ("*p means to paste on next line (p) from the register (") that represents the clipboard (*))
+nnoremap <Leader>v :set paste<CR>"*p<cr>:set nopaste<cr>;
+
+let g:jsx_ext_required = 0 " Allow JSX in normal JS files
+
+"  vim airline
 let g:airline_enable_branch=1
 let g:airline_powerline_fonts=1   " automatic population of g:airline_symbols dictionary with powerline symbols.
 let g:airline_detect_modified=1   " marks when the file has changed
@@ -28,3 +34,18 @@ let g:airline_detect_iminsert=0   " I have no idea
 let g:airline_inactive_collapse=1 " inactive windows should have the left section collapsed to only the filename of that buffer.
 let g:airline_solarized_bg='dark' " Use Solarized Dark theme
 let g:airline_theme='dark'        " Dark airline theme
+let g:airline#extensions#ale#enabled = 1 " Show errors in my statusline
+
+" tmux airline
+let g:tmuxline_preset = {
+      \'a'    : '#S',
+      \'b'    : '#I #W',
+      \'win'  : '#I #W',
+      \'cwin' : '#I #W'}
+
+" ale
+let g:ale_lint_on_save = 1 " run linter only on save
+let g:ale_lint_on_text_changed = 'never' " You can disable this option too
+let g:ale_lint_on_enter = 0 " if you don't want linters to run on opening a file
+" After this is configured, :ALEFix will try and fix your JS code with ESLint.
+let g:ale_fixers = { 'javascript': ['eslint'], }

@@ -6,4 +6,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'mattn/emmet-vim'
 Plug 'https://github.com/bling/vim-airline'
 Plug 'edkolev/tmuxline.vim'
-
+Plug 'mxw/vim-jsx'
+Plug 'isRuslan/vim-es6'
+Plug 'https://github.com/ervandew/supertab.git'

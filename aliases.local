@@ -7,8 +7,13 @@ alias find_servers='sudo lsof -iTCP -sTCP:LISTEN -P'
 alias infosweep-frontend='rvm use 2.4.0 && rvm gemset use monitoring'
 alias infosweep-backend='rvm use 2.4.0 && rvm gemset use infosweep-backend'
 alias infosweep-cms='rvm use 2.4.0 && rvm gemset use infosweep-cms'
+alias infosweep-static='rvm use 2.4.0 && rvm gemset use infosweep-static'
 alias core-app='rvm use 2.4.0 && rvm gemset use core-app'
 alias marca-global='rvm use 2.3.1 && rvm gemset use marca-global-static'
+alias rep-core='rvm use 2.2.1 && rvm gemset use rep-core'
+alias reputation='rvm use 2.2.2 && rvm gemset use reputation'
+alias massive-peak='rvm use 2.3.1 && rvm gemset use massive-peak'
+alias photoapp='rvm use 2.5.0 && rvm gemset use t-photo-app-backend'
 
 # tig
 alias tst="tig status"
