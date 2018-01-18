@@ -35,9 +35,7 @@ let g:airline_inactive_collapse=1 " inactive windows should have the left sectio
 let g:airline_solarized_bg='dark' " Use Solarized Dark theme
 let g:airline_theme='dark'        " Dark airline theme
 let g:airline#extensions#ale#enabled = 1 " Show errors in my statusline
-
-" tmux airline
-let g:tmuxline_preset = {
+" tmux airline let g:tmuxline_preset = {
       \'a'    : '#S',
       \'b'    : '#I #W',
       \'win'  : '#I #W',

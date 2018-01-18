@@ -73,23 +73,6 @@ bindkey '\C-x\C-e' edit-command-line
 # file rename magick
 bindkey "^[m" copy-prev-shell-word
 
-# give us access to ^Q
-stty -ixon
-
-# vi mode
-bindkey -v
-bindkey "^F" vi-cmd-mode
-
-# handy vi keybindings
-bindkey "^A" beginning-of-line
-bindkey "^E" end-of-line
-bindkey "^K" kill-line
-bindkey "^R" history-incremental-search-backward
-bindkey "^P" history-search-backward
-bindkey "^Y" accept-and-hold
-bindkey "^Q" push-line-or-edit
-bindkey -s "^T" "^[Isudo ^[A" # "t" for "toughguy"
-
 # consider emacs keybindings:
 
 #bindkey -e  ## emacs key bindings
