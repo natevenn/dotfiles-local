@@ -20,7 +20,7 @@ alias tst="tig status"
 
 # git
 #alias loggy=git log --oneline --graph --decorate --all
-#alias gco='git checkout'
+alias gco='git checkout'
 #alias gcd='gco development'
 #alias gcm='gco master'
 #alias gcb='gco -b'

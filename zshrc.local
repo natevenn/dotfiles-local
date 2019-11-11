@@ -21,6 +21,9 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/Nate/dotfiles-local/.oh-my-zsh
+export PATH="/usr/local/opt/postgresql@11/bin:$PATH"
+export PG_HOST=localhost
+export PGDATA="/usr/local/var/postgres"
 
 DEFAULT_USER="Nate"
 
@@ -88,8 +91,8 @@ plugins=(git)
 export PATH=$PATH:User/.rvm/bin
 
 source $ZSH/oh-my-zsh.sh
-
-
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/workspace/advoy-rails/project_settings/zshrc
 
 # You may need to manually set your language environment
 # # export LANG=en_US.UTF-8
