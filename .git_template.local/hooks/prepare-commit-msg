@@ -1,0 +1,12 @@
+#!/user/bin/env ruby
+
+commit_file = ARGV[0]
+branch_name = `git rev-parse --abbrev-ref HEAD`
+ticket_number_match = branch_name.match(/AR\-\d+/)
+if ticket_number_match
+  new_commit_message = "#{ticket_number_match[0]} #comment"
+    File.open(commit_file, 'w') do |f|
+      f.write(new_commit_message)
+  end
+end
+

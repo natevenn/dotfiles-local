@@ -40,3 +40,14 @@ alias dc='docker-compose'
 alias cf='cd ~/marca-development/infosweep/frontend'
 alias cb='cd ~/marca-development/infosweep/backend'
 
+# Kerberos Client
+alias kinit='kinit --keychain -f nvenn@ATHN.ORG'
+alias staging='-K nvenn@staging.athn.org'
+alias staging-test='-K nvenn@clinicalmanager-staging-test.athn.org'
+alias deployer='-K nvenn@deployer.athn.org'
+
+# tmuxinator
+alias tx=tmuxinator
+
+
+

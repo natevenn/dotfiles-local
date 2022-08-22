@@ -4,8 +4,8 @@ bind-key -r C-s send-prefix
 bind-key r source-file ~/.tmux.conf \; display-message "~/.tmux.conf reloaded"
 
 # more intuitive keybindings for splitting
-bind \ split-window -h -c "#{pane_current_path}"
-bind - split-window -v -c "#{pane_current_path}"
+bind / split-window -v -c "#{pane_current_path}"
+bind - split-window -h -c "#{pane_current_path}"
 
 #Smart pane switching with awareness of vim splits
 # See this blog post for additional detail:
@@ -35,3 +35,11 @@ bind -n C-Down resize-pane -D 5
 bind -n C-Up resize-pane -U 5
 
 set-option -g default-command "reattach-to-user-namespace -l zsh"
+
+set -g @continuum-boot 'on'
+set -g @continuum-restore 'on'
+set -g @continuum-boot-options 'iterm,fullscreen'
+
+#tmux plugins
+run-shell ~/tmux-plugins/tmux-resurrect/resurrect.tmux
+run-shell ~/tmux-plugins/tmux-continuum/continuum.tmux
